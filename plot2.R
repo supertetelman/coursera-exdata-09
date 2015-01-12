@@ -3,5 +3,5 @@ consumption_subset <- power_consumption_data[power_consumption_data$Date %in% c(
 parsed_dates <- strptime(paste(consumption_subset$Date, consumption_subset$Time),"%d/%m/%Y %H:%M:%S")
 parsed_power <- as.numeric(consumption_subset$Global_active_power)
 png("plot2.png", width=480, height=480)
-plot(parsed_dates,parsed_power, type="l", col="black", ylab="Global Active Power (kilowatts)") 
+plot(parsed_dates,parsed_power, type="l", col="black",xlab="", ylab="Global Active Power (kilowatts)") 
 dev.off()
